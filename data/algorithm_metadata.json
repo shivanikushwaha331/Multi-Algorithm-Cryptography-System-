@@ -1,0 +1,40 @@
+{
+  "AES": {
+    "type": "Symmetric",
+    "security": "High",
+    "key_sizes": ["128", "192", "256"],
+    "attacks": ["Brute Force (impractical)", "Side Channel"],
+    "use_case": "File encryption, secure communication",
+    "recommendation": "Use AES-256 for maximum security"
+  },
+  "RSA": {
+    "type": "Asymmetric",
+    "security": "High",
+    "key_sizes": ["1024", "2048", "4096"],
+    "attacks": ["Factorization Attack"],
+    "use_case": "Key exchange, digital signatures",
+    "recommendation": "Use at least 2048-bit keys"
+  },
+  "DES": {
+    "type": "Symmetric",
+    "security": "Weak",
+    "key_sizes": ["56"],
+    "attacks": ["Brute Force"],
+    "use_case": "Legacy systems",
+    "recommendation": "Avoid using DES"
+  },
+  "MD5": {
+    "type": "Hash",
+    "security": "Weak",
+    "attacks": ["Collision Attack", "Rainbow Table"],
+    "use_case": "Checksums only",
+    "recommendation": "Do NOT use for passwords"
+  },
+  "SHA-256": {
+    "type": "Hash",
+    "security": "Very High",
+    "attacks": ["Brute Force (impractical)"],
+    "use_case": "Password hashing, blockchain",
+    "recommendation": "Use with salt for passwords"
+  }
+}
